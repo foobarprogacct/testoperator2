@@ -1,0 +1,16 @@
+domain: foobarprogacct.github.com
+layout:
+- go.kubebuilder.io/v3
+projectName: testoperator2
+repo: github.com/foobarprogacct/testoperator2
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: foobarprogacct.github.com
+  group: test.istio
+  kind: Base
+  path: github.com/foobarprogacct/testoperator2/api/v1
+  version: v1
+version: "3"

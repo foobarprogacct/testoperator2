@@ -1,0 +1,24 @@
+# permissions for end users to edit bases.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: base-editor-role
+rules:
+- apiGroups:
+  - test.istio.foobarprogacct.github.com
+  resources:
+  - bases
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.istio.foobarprogacct.github.com
+  resources:
+  - bases/status
+  verbs:
+  - get

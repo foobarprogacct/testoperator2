@@ -1,0 +1,20 @@
+# permissions for end users to view bases.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: base-viewer-role
+rules:
+- apiGroups:
+  - test.istio.foobarprogacct.github.com
+  resources:
+  - bases
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - test.istio.foobarprogacct.github.com
+  resources:
+  - bases/status
+  verbs:
+  - get
